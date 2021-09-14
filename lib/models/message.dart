@@ -1,4 +1,5 @@
 import 'package:chat_app/models/user.dart';
+import 'package:flutter/material.dart';
 
 class Message {
   User user;
@@ -18,6 +19,32 @@ class Message {
       Message(users[5], 'Flutter is not bad', '13:55'),
     ];
   }
+
+  static List<Message> generateMessagesFromUser() {
+    return [
+      Message(
+        users[0],
+        'Writing fake messages what a life',
+        '18:35',
+      ),
+      Message(
+        me,
+        'Yeah',
+        '18:37',
+      ),
+      Message(
+        users[0],
+        'Writing fake messages what a life',
+        '18:39',
+      ),
+      Message(
+        me,
+        'I understand dont text me again',
+        '18:41',
+      ),
+    ];
+  }
 }
 
 var users = User.generateUsers();
+var me = User(0, 'Yigit', 'Tin', 'assets/images/user0.png', Color(0xFFFFFFFF));
